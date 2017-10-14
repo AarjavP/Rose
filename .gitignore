@@ -1,3 +1,7 @@
+##################
+#  Java ignores  #
+##################
+
 # Compiled class file
 *.class
 
@@ -20,3 +24,38 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+####################
+#  Gradle ignores  #
+####################
+
+.gradle
+/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+######################
+#  IntelliJ ignores  #
+######################
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+.idea/
+
+# build / output
+out/
+
+#####################
+#  Eclipse ignores  #
+#####################
+bin/
+.settings/
+.project
+.classpath
