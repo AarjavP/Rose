@@ -6,12 +6,21 @@ repositories {
 
 dependencies {
     //discord api usage
-    compile group: 'net.dv8tion', name: 'JDA', version: '3.3.0_260'
+    compile group: 'net.dv8tion', name: 'JDA', version: '3.5.0_338'
 
     //logging
-    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.9.1'
-//    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.9.1'
-    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.9.1'
+    def logVer = '2.10.0'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: logVer
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: logVer
+    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: logVer
+
+    //config/commands persistence
+//    compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.21.0.1'
+//    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.13.Final' //ORM
+    compile group: 'org.yaml', name: 'snakeyaml', version: '1.19'
+
+    compile group: 'com.google.guava', name: 'guava', version: '24.0-jre'
+
 }
 
 apply plugin: 'application'
