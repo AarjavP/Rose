@@ -1,0 +1,16 @@
+apply gradleScript('repos')
+apply gradleScript('kotlin-jvm')
+
+task greet {
+    println 'config'
+    
+    doLast {
+        println 'running greet'
+    }
+}
+task greet2 {
+    println 'config2'
+    doLast {
+        println 'running greet2'
+    }
+}

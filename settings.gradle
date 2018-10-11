@@ -1,3 +1,4 @@
-include 'rose-core'
-
 rootProject.name = 'RoseRepo'
+
+include 'kodenames-core'
+include 'utils'

@@ -1,0 +1,9 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.2.71' apply false
+}
+
+ext {
+    gradleScript = { String scriptName -> [from: "$rootDir/gradle-scripts/${scriptName}.gradle"] }
+}
+
+println 'in root build.gradle'
