@@ -24,9 +24,15 @@
   - Initialize board (pass in the words)
   - keeps track of turn
     - team 1 spy
+      - input from team 1 spy to continue
     - team 1 guesses
+      - votes from rest of team 1
+      - reveal top vote
+      - repeat until wrong guess or out of guesses
     - team 2 spy
+      - input from team 2 spy to continue
     - team 2 guesses 
-  - gets card to reveal from board 
-   
-  - announces the winner 
+      - votes from rest of team 2
+      - reveal top vote
+      - repeat until wrong guess or out of guesses
+  - announces the winner when black card picked or all cards for a team have been revealed
