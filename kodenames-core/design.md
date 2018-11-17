@@ -36,3 +36,4 @@
       - reveal top vote
       - repeat until wrong guess or out of guesses
   - announces the winner when black card picked or all cards for a team have been revealed
+  

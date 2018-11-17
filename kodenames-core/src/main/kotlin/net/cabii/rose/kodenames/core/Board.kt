@@ -29,11 +29,11 @@ fun Int.times(action: () -> Unit) {
 
 class Board(words: List<String>) {
     // blue = 9 cards, red = 8 cards, white = 7 cards, Black = 1
-    val remainingCounts: MutableMap<CardColor, Int> = mutableMapOf(
+    private val remainingCounts: MutableMap<CardColor, Int> = mutableMapOf(
         CardColor.BLUE to 9, CardColor.RED to 8,
         CardColor.WHITE to 7, CardColor.BLACK to 1
     )
-    val cards: List<Card>
+    private val cards: List<Card>
 
     init {
         val listOfCardColors: MutableList<CardColor> = ArrayList(25)
@@ -58,14 +58,14 @@ class Board(words: List<String>) {
             card.color
         } else {
             val color: CardColor = card.reveal()
-            remainingCounts.computeIfPresent(color, { _, count ->
+            remainingCounts.computeIfPresent(color) { _, count ->
                 count - 1
-            })
+            }
             card.reveal()
         }
     }
 
     // return revealed num of each team
-    fun remaining(color: CardColor): Int = remainingCounts[color] ?: 0
+    infix fun remaining(color: CardColor): Int = remainingCounts[color] ?: 0
 
 }
