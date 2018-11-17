@@ -1,0 +1,18 @@
+dependencies {
+    testImplementation 'org.assertj:assertj-core:3.11.1'
+}
+
+//junit 5 stuff
+dependencies{
+    def junitVersion = '5.3.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:' + junitVersion
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:' + junitVersion
+    testRuntime 'org.junit.jupiter:junit-jupiter-engine:' + junitVersion
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+    }
+}

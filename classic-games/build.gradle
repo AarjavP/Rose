@@ -1,0 +1,10 @@
+apply gradleScript('repos')
+apply gradleScript('kotlin-jvm')
+apply gradleScript('jvm-testing')
+
+group 'net.cabii.rose'
+version '0.1.0'
+
+dependencies {
+    implementation rootProject.project( 'jvm-utils' )
+}

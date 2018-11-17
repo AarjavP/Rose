@@ -38,14 +38,16 @@ class Board(words: List<String>) {
     init {
         val listOfCardColors: MutableList<CardColor> = ArrayList(25)
 
-        remainingCounts.forEach { color, count -> count.times { listOfCardColors.add(color) } }
+        for ((color, count) in remainingCounts) {
+            count.times { listOfCardColors.add(color) }
+        }
 
         listOfCardColors.shuffle()
 
         val listOfCards: MutableList<Card> = ArrayList(25)
 
         for (i in 0..24) {
-            listOfCards.add(Card(listOfCardColors[i], words[i], Position(i)))
+            listOfCards += Card(listOfCardColors[i], words[i], Position(i))
         }
         cards = listOfCards
 

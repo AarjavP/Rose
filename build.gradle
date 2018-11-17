@@ -5,5 +5,3 @@ plugins {
 ext {
     gradleScript = { String scriptName -> [from: "$rootDir/gradle-scripts/${scriptName}.gradle"] }
 }
-
-println 'in root build.gradle'

@@ -1,4 +1,5 @@
 rootProject.name = 'RoseRepo'
 
+include 'jvm-utils'
 include 'kodenames-core'
-include 'utils'
+include 'classic-games'

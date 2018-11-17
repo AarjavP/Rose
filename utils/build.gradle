@@ -1,2 +1,0 @@
-apply gradleScript('repos')
-apply gradleScript('kotlin-jvm')
