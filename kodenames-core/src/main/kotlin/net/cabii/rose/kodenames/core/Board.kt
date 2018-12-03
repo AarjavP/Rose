@@ -1,7 +1,13 @@
 package net.cabii.rose.kodenames.core
 
 enum class CardColor {
-    BLUE, RED, BLACK, WHITE
+    BLUE, RED, BLACK, WHITE;
+    val team : Team?
+    get() = when(this) {
+        BLUE -> Team.BLUE
+        RED -> Team.RED
+        else -> null
+    }
 }
 
 data class Position(val x: Int, val y: Int) {
